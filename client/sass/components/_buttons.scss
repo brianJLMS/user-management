@@ -1,0 +1,21 @@
+.btn {
+  width: 100px;
+  height: 30px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+
+  &__add-user {
+    background-color: #00d300;
+    border-bottom-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+  }
+
+  &__search-user {
+    background-color: map-get($map: $palette, $key: "gray");
+  }
+
+  &__update-user {
+    background-color: map-get($map: $palette, $key: "edit");
+  }
+}

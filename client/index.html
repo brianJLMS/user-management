@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://necolas.github.io/normalize.css/8.0.1/normalize.css"
+    />
+    <link rel="stylesheet" href="../css/styles.css" />
+    <title>User Management System</title>
+  </head>
+  <body>
+    <header>
+      <h1>User Management System</h1>
+    </header>
+    <main>
+      <article class="user">
+        <div class="user__inp-container">
+          <label class="user__label">Name: </label>
+          <input type="text" id="name-input" class="user__input" required />
+        </div>
+        <div class="user__inp-container">
+          <label class="user__label">Last Name: </label>
+          <input type="text" id="lastName-input" class="user__input" required />
+        </div>
+        <div class="user__inp-container">
+          <label class="user__label">Email: </label>
+          <input type="email" class="user__input" id="email-input" required />
+        </div>
+
+        <button id="add-btn" class="btn btn__add-user">Add User</button>
+      </article>
+
+      <article class="users-container">
+        <div class="search">
+          <input
+            type="text"
+            class="search__input"
+            placeholder="search by name..."
+            id="search-input"
+          />
+          <button id="search-btn" class="btn btn__search-user">Search</button>
+        </div>
+
+        <div class="table-scroll">
+          <table id="table" class="table">
+            <thead class="table__head">
+              <th class="table__head-cell">ID</th>
+              <th class="table__head-cell">Name</th>
+              <th class="table__head-cell">Last Name</th>
+              <th class="table__head-cell">Email</th>
+              <th class="table__head-cell">Date Added</th>
+              <th class="table__head-cell">DELETE</th>
+              <th class="table__head-cell">EDIT</th>
+            </thead>
+            <tbody class="table-body"></tbody>
+          </table>
+        </div>
+      </article>
+
+      <section class="update update-none" hidden id="update-section">
+        <div class="update__inp-container">
+          <label class="update__label">Name: </label>
+          <input class="update__input" type="text" id="update-name-input" />
+        </div>
+        <div class="update__inp-container">
+          <label class="update__label">Last Name: </label>
+          <input type="text" class="update__input" id="update-lastname-input" />
+        </div>
+        <div class="update__inp-container">
+          <label class="update__label">Email: </label>
+          <input type="email" class="update__input" id="update-email-input" />
+        </div>
+        <button id="update-row-btn" class="btn btn__update-user">Update</button>
+      </section>
+
+      <script src="index.js"></script>
+    </main>
+  </body>
+</html>
